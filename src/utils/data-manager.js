@@ -271,6 +271,7 @@ export default class DataManager {
   changeColumnHidden(column, hidden) {
     column.hidden = hidden;
     column.hiddenByColumnsButton = hidden;
+    if (column.tableData.width === undefined) this.setColumns(this.columns);
   }
 
   changeTreeExpand(path) {
